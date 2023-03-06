@@ -10,9 +10,6 @@ const PORT = 5000;
 
 
 
-
-
-
 // starting Database
 async function start(){
     await dbConnect();

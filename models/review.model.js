@@ -1,25 +1,29 @@
 const {Schema,model} = require('mongoose')
 
-const ReviewSchema = new Schema({
-    gigId: {
+const ReviewSchema = new Schema(
+    {
+      gigId: {
         type: String,
-        required:true,
-    },
-    userId: {
+        required: true,
+      },
+      userId: {
         type: String,
-        required:true,
-    },
-    star: {
+        required: true,
+      },
+      star: {
         type: Number,
         required: true,
-        enum:[1,2,3,4,5],
-    },
-    desc: {
+        enum:[1,2,3,4,5]
+      },
+      desc: {
         type: String,
-        required:true,
+        required: true,
+      },
+    },
+    {
+      timestamps: true,
     }
-}, {
-    timestamps:true
-})
+  );
+  
 
 module.exports = model("Review", ReviewSchema);
