@@ -31,11 +31,11 @@ const GigSchema = new Schema({
     },
     cover: {
         type:String,
-        required:true,
+        required:false,
     },
     images: {
         type: [String],
-        required:true,
+        required:false,
     },
     shortTitle: {
         type: String,

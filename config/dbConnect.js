@@ -6,7 +6,7 @@ mongoose.set('strictQuery', true);
  async function dbConnect(){
     try {
         await mongoose.connect(process.env.MONGO_URL,{
-            dbName:"workr",
+            dbName:"mol",
 
         })
         console.log("database connected successfully")
