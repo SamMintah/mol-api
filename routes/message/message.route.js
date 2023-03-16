@@ -2,8 +2,8 @@ const {Router} =require("express");
 const {
   createMessage,
   getMessages,
-} =require("../controllers/message.controller");
-const verifyToken = require("../middleware/jwt.js");
+} =require("../../controllers/message.controller");
+const verifyToken = require("../../middleware/jwt.js");
 
 const router = Router();
 

@@ -4,8 +4,8 @@ const {
   getAllConversations,
   getConversation,
   updateConversation,
-} = require("../controllers/conversation.controller");
-const verifyToken = require("../middleware/jwt.js");
+} = require("../../controllers/conversation.controller");
+const verifyToken = require("../../middleware/jwt.js");
 
 const router = Router();
 

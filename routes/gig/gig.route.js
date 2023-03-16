@@ -4,8 +4,8 @@ const {
   deleteGig,
   getGig,
   getGigs
-} =require("../controllers/gig.controller.js");
-const verifyToken = require("../middleware/jwt.js");
+} =require("../../controllers/gig.controller.js");
+const verifyToken = require("../../middleware/jwt.js");
 
 const router = Router();
 

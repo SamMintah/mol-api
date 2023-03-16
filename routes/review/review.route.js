@@ -1,10 +1,10 @@
 const {Router} = require("express");
-const verifyToken = require("../middleware/jwt.js");
+const verifyToken = require("../../middleware/jwt.js");
 const {
   createReview,
   getReviews,
   deleteReview,
-} =require("../controllers/review.controller");
+} =require("../../controllers/review.controller");
 
 const router =Router();
 

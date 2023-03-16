@@ -1,6 +1,6 @@
 const {Router} =require("express");
-const verifyToken = require("../middleware/jwt.js");
-const { getOrders, intent, confirm } = require("../controllers/order.controller");
+const verifyToken = require("../../middleware/jwt.js");
+const { getOrders, intent, confirm } = require("../../controllers/order.controller");
 
 const router = Router();
 

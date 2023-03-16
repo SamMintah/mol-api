@@ -1,12 +1,12 @@
 const express = require("express");
 const { dbConnect } = require("./config/dbConnect");
-const authRoute = require("./routes/auth.route");
-const conversationRoute = require("./routes/conversation.route");
-const gigRoute = require("./routes/gig.route.js");
-const userRoute = require("./routes/user.route.js");
-const orderRoute = require("./routes/order.route.js");
-const messageRoute = require("./routes/message.route.js");
-const reviewRoute = require("./routes/review.route.js");
+const authRoute = require("./routes/auth/auth.route");
+const conversationRoute = require("./routes/conversation/conversation.route");
+const gigRoute = require("./routes/gig/gig.route");
+const userRoute = require("./routes/user/user.route");
+const orderRoute = require("./routes/order/order.route");
+const messageRoute = require("./routes/message/message.route");
+const reviewRoute = require("./routes/review/review.route");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
