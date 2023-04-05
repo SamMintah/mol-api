@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const createError = require("../utils/createError.js");
 const jwt = require("jsonwebtoken");
 
-const register = async (req, res,next) => {
+const register = async (req, res, next) => {
   try {
     const isExist = await User.findOne({ email: req.body.email });
     if (isExist) {
@@ -12,10 +12,14 @@ const register = async (req, res,next) => {
     const hash = bcrypt.hashSync(req.body.password, 10);
 
     const newUser = new User({
-      ...req.body,
+      username: req.body.username, // explicitly set username field
+      email: req.body.email,
       password: hash,
+      phone: req.body.phone,
+      country: req.body.country,
+      isSeller: req.body.isSeller,
     });
-  
+
     await newUser.save();
     const { password, ...info } = newUser._doc;
 
@@ -23,11 +27,11 @@ const register = async (req, res,next) => {
       message: "User has been created.",
       user: info,
     });
-    // res.status(201).send("User has been created.");
   } catch (err) {
     next(err);
   }
 };
+
 
 const login = async (req, res, next) => {
   try {
